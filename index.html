@@ -12,7 +12,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600&family=Inter:wght@300;400;500;600&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
   <link rel="preload" as="image" href="assets/img/hero.webp">
-  <link rel="stylesheet" href="assets/css/style.css?v=4">
+  <link rel="stylesheet" href="assets/css/style.css?v=7">
+  <link rel="stylesheet" href="assets/css/sections.css?v=7">
 </head>
 <body class="is-loading">
 
@@ -53,6 +54,7 @@
       <a href="#sobre">Sobre</a>
       <a href="#projetos">Projetos</a>
       <a href="#ambientes">Ambientes</a>
+      <a href="#estilos">Estilos</a>
       <a href="#processo">Processo</a>
       <a href="#faq">Dúvidas</a>
     </nav>
@@ -65,6 +67,7 @@
       <a href="#sobre"><em>01</em>Sobre</a>
       <a href="#projetos"><em>02</em>Projetos</a>
       <a href="#ambientes"><em>03</em>Ambientes</a>
+      <a href="#estilos"><em>✦</em>Simulador de estilos</a>
       <a href="#processo"><em>04</em>Processo</a>
       <a href="#faq"><em>05</em>Dúvidas</a>
     </nav>
@@ -110,6 +113,23 @@
             <div class="reveal-img" data-speed="6"><img src="assets/img/p-banheiro.webp" alt="Gabinete de banheiro amadeirado com bancada em pedra" loading="lazy"></div>
             <figcaption>Banheiro da suíte · Residencial</figcaption>
           </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- IMAGEM QUE SE EXPANDE -->
+    <section class="expand" aria-label="O alto padrão se revela nos detalhes">
+      <div class="expand__pin">
+        <div class="expand__frame">
+          <img src="assets/img/big-closet.webp" alt="Closet planejado em madeira com ilha central e iluminação embutida" loading="lazy">
+          <div class="expand__shade"></div>
+        </div>
+        <p class="expand__word expand__word--l">O alto padrão</p>
+        <p class="expand__word expand__word--r">nos detalhes</p>
+        <div class="expand__final">
+          <span class="tag">Konceitto Interiores</span>
+          <h2>O verdadeiro alto padrão<br>se revela nos detalhes.</h2>
+          <p>Cada encaixe, cada veio de madeira e cada ponto de luz é pensado e executado pela nossa equipe.</p>
         </div>
       </div>
     </section>
@@ -203,6 +223,90 @@
       </div>
     </section>
 
+    <!-- SIMULADOR DE ESTILOS -->
+    <section class="styler section" id="estilos">
+      <div class="wrap">
+        <div class="styler__head">
+          <div class="sec-num"><span class="num">✦</span><span class="tag">Simulador de estilos</span></div>
+          <h2 class="h2" data-split>Escolha um estilo. Veja a sala ganhar vida.</h2>
+          <p data-reveal>Esta é uma sala como a construtora entrega. Toque em um estilo e veja como a marcenaria da Konceitto transforma o mesmo espaço.</p>
+        </div>
+
+        <div class="styler__stage" data-reveal>
+          <img class="styler__img is-on" data-style="vazia" src="assets/img/estilo-vazia.webp" alt="Sala vazia, sem móveis">
+          <img class="styler__img" data-style="contemporaneo" src="assets/img/estilo-contemporaneo.webp" alt="A mesma sala com painel ripado em freijó e rack suspenso iluminado" loading="lazy">
+          <img class="styler__img" data-style="minimalista" src="assets/img/estilo-minimalista.webp" alt="A mesma sala com armários em laca off-white e nicho em carvalho claro" loading="lazy">
+          <img class="styler__img" data-style="urbano" src="assets/img/estilo-urbano.webp" alt="A mesma sala com painel grafite, estante em metal preto e nogueira" loading="lazy">
+          <img class="styler__img" data-style="classico" src="assets/img/estilo-classico.webp" alt="A mesma sala com boiserie em laca greige e cristaleiras com perfis dourados" loading="lazy">
+          <div class="styler__before" aria-hidden="true"><img src="assets/img/estilo-vazia.webp" alt=""></div>
+          <div class="styler__handle" aria-hidden="true"><span>Antes</span><i></i><span>Depois</span></div>
+          <i class="styler__scan" aria-hidden="true"></i>
+          <span class="styler__label"><b class="js-style-name">Sala vazia</b><em>Simulação ilustrativa</em></span>
+          <button type="button" class="styler__compare" hidden>Comparar com a sala vazia</button>
+        </div>
+
+        <div class="styler__bar">
+          <div class="styler__tabs" role="tablist" aria-label="Estilos de marcenaria">
+            <button role="tab" aria-selected="true" data-style="vazia"><img src="assets/img/estilo-vazia.webp" alt="" loading="lazy"><span>Sala vazia</span></button>
+            <button role="tab" aria-selected="false" data-style="contemporaneo"><img src="assets/img/estilo-contemporaneo.webp" alt="" loading="lazy"><span>Contemporâneo</span></button>
+            <button role="tab" aria-selected="false" data-style="minimalista"><img src="assets/img/estilo-minimalista.webp" alt="" loading="lazy"><span>Minimalista</span></button>
+            <button role="tab" aria-selected="false" data-style="urbano"><img src="assets/img/estilo-urbano.webp" alt="" loading="lazy"><span>Urbano grafite</span></button>
+            <button role="tab" aria-selected="false" data-style="classico"><img src="assets/img/estilo-classico.webp" alt="" loading="lazy"><span>Clássico</span></button>
+          </div>
+          <div class="styler__info" aria-live="polite">
+            <p class="styler__desc js-style-desc">Paredes nuas, piso pronto e muita possibilidade. Escolha um estilo ao lado.</p>
+            <ul class="styler__chips js-style-chips"></ul>
+            <a href="#contato" class="btn btn--dark btn--sm js-style-cta" data-open-lead><span>Quero minha sala assim</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DETALHES (imagens grandes) -->
+    <section class="details section--dark" id="detalhes">
+      <div class="wrap details__head">
+        <span class="tag">Acabamento Konceitto</span>
+        <h2 class="h2" data-split>Detalhes que você sente todos os dias</h2>
+      </div>
+      <div class="details__grid">
+        <div class="details__media" aria-hidden="true">
+          <div class="details__frame">
+            <img class="is-on" src="assets/img/det-lamina.webp" alt="" loading="lazy">
+            <img src="assets/img/det-cava.webp" alt="" loading="lazy">
+            <img src="assets/img/det-puxador.webp" alt="" loading="lazy">
+            <img src="assets/img/det-led-closet.webp" alt="" loading="lazy">
+          </div>
+          <span class="details__count"><b class="js-det-n">01</b> / 04</span>
+        </div>
+        <ol class="details__list">
+          <li class="det is-on">
+            <img class="det__img" src="assets/img/det-lamina.webp" alt="Lâmina de madeira natural com veios marcantes" loading="lazy">
+            <span class="det__n">01</span>
+            <h3>Lâminas naturais</h3>
+            <p>Freijó, carvalho e nogueira selecionados à mão, com veios combinados de uma porta para a outra.</p>
+          </li>
+          <li class="det">
+            <img class="det__img" src="assets/img/det-cava.webp" alt="Portas em madeira com puxador cava usinado" loading="lazy">
+            <span class="det__n">02</span>
+            <h3>Puxadores e cavas sob medida</h3>
+            <p>Cava usinada, puxador embutido ou perfil em alumínio, desenhados para o seu projeto e não tirados de catálogo.</p>
+          </li>
+          <li class="det">
+            <img class="det__img" src="assets/img/det-puxador.webp" alt="Portas de madeira com puxadores metálicos e sombra suave" loading="lazy">
+            <span class="det__n">03</span>
+            <h3>Ferragens com amortecimento</h3>
+            <p>Portas e gavetas com fechamento suave e corrediças de extração total. Silêncio e durabilidade no uso diário.</p>
+          </li>
+          <li class="det">
+            <img class="det__img" src="assets/img/det-led-closet.webp" alt="Closet em madeira escura com iluminação de LED nas prateleiras" loading="lazy">
+            <span class="det__n">04</span>
+            <h3>Iluminação integrada</h3>
+            <p>Fitas de LED embutidas em nichos, prateleiras e closets, que valorizam a madeira e facilitam a rotina.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
     <!-- 04 PROCESSO + liderança -->
     <section class="process section" id="processo">
       <div class="wrap process__grid">
@@ -281,6 +385,15 @@
       </div>
     </section>
 
+    <!-- FAIXA DE IMAGEM CHEIA -->
+    <section class="band">
+      <div class="band__bg"><img src="assets/img/big-sala-painel.webp" alt="Sala com painel de madeira natural do piso ao teto" loading="lazy" data-parallax></div>
+      <div class="band__txt wrap">
+        <span class="tag">Do projeto à montagem</span>
+        <h2 class="band__title" data-split>Fabricação própria. Montagem própria. Compromisso do primeiro ao último dia.</h2>
+      </div>
+    </section>
+
     <!-- CTA duplo -->
     <section class="cta" id="contato">
       <div class="cta__bg"><img src="assets/img/cta-bg.webp" alt="" loading="lazy" data-parallax></div>
@@ -307,6 +420,7 @@
         <li><a href="#sobre">Sobre</a></li>
         <li><a href="#projetos">Projetos</a></li>
         <li><a href="#ambientes">Ambientes</a></li>
+        <li><a href="#estilos">Simulador de estilos</a></li>
         <li><a href="#processo">Processo</a></li>
       </ul>
       <ul>
@@ -416,6 +530,7 @@
             <label class="check"><input type="checkbox" name="lgpd" value="ok"><span>Concordo em ser contatado pela Konceitto Interiores. <a href="privacidade.html" target="_blank">Ver política de privacidade</a>.</span></label>
           </div>
           <p class="err" role="alert"></p>
+          <input type="hidden" name="estilo" value="">
         </fieldset>
 
         <div class="q q--done" aria-live="polite">
@@ -436,6 +551,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
-  <script src="assets/js/main.js?v=2"></script>
+  <script src="assets/js/main.js?v=7"></script>
+  <script src="assets/js/sections.js?v=7"></script>
 </body>
 </html>

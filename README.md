@@ -29,3 +29,18 @@ HTML/CSS/JS estático + GSAP/ScrollTrigger + Lenis (CDN). Preview local: `launch
 - Etapas do processo, respostas do FAQ, atendimento "Brasília e DF".
 - Nomes/legendas dos projetos; "Recepção com muxarabi · com Farolim Arquitetura" (post compartilhado pela Farolim).
 - Faixas de investimento do formulário.
+
+## Seções extras (2ª versão)
+- **Imagem que se expande** (depois do "Sobre"): ao rolar, a foto do closet abre de um quadro pequeno para a tela cheia, e as palavras "O alto padrão / nos detalhes" saem pelas laterais.
+- **Simulador de estilos** (`#estilos`): sala vazia + 4 estilos de marcenaria (Contemporâneo amadeirado, Minimalista, Urbano grafite, Clássico atemporal).
+  Ao escolher, a sala "ganha" os móveis com uma cortina e uma linha de luz. Tem comparação antes/depois arrastável e o botão
+  "Quero minha sala assim" abre o formulário com o estilo escolhido (vai na mensagem do WhatsApp).
+  Na primeira vez que a seção aparece, a sala muda sozinha para o estilo contemporâneo.
+- **Detalhes** (fundo escuro): imagem fixa que troca conforme o texto rola (lâminas, cavas/puxadores, ferragens, iluminação).
+- **Faixa de imagem cheia** antes do CTA: "Fabricação própria. Montagem própria."
+- Código em `assets/css/sections.css` e `assets/js/sections.js`.
+
+### Imagens das seções extras
+- `estilo-*.webp`: geradas por IA (Higgsfield, gpt_image_2_6) a partir da mesma sala vazia. Marcadas na página como "Simulação ilustrativa".
+  Ideal trocar por renders 3D reais da Konceitto, com a mesma câmera em todos os estilos.
+- `big-closet.webp`, `big-sala-painel.webp`, `det-*.webp`: Unsplash (licença livre).

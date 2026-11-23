@@ -346,12 +346,14 @@ function submitLead() {
     nome, whatsapp: fone, local: (fd.get("local") || "").trim(),
     ambientes: fd.getAll("ambiente").join(", "), fase: fd.get("fase") || "",
     projeto: fd.get("projeto") || "", prazo: fd.get("prazo") || "", investimento: fd.get("investimento") || "",
+    estilo: fd.get("estilo") || "",
     origem: "LP Konceitto Interiores", pagina: location.href, data: new Date().toISOString(),
   };
   const linhas = [
     `Olá, Konceitto! Vim pelo site e quero um orçamento de marcenaria.`,
     ``,
     `• Ambientes: ${payload.ambientes || "-"}`,
+    payload.estilo ? `• Estilo que gostei no simulador: ${payload.estilo}` : null,
     `• Fase do imóvel: ${payload.fase || "-"}`,
     `• Projeto: ${payload.projeto || "-"}`,
     `• Quando quero começar: ${payload.prazo || "-"}`,
